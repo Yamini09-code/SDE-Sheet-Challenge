@@ -37,6 +37,5 @@ int n = A.size();
 
    reverse(A.begin()+ index + 1, A.end());
    return A;
- 
- 
+
 }
