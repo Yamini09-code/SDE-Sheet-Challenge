@@ -13,10 +13,16 @@ vector<int> findMissingRepeatingNumbers(vector<int> a) {
 
   long long val1 = sumarr - sumnum;       // x-y   / repe - missing
   long long val2 = squarearr - squarenum; // x2-y2  repeating^2 - missing^2
-  val2 = val2 / val1;
+  if(val1==0){//edge case val 1 ==0
+      return {-1,-1};
+  }
+  else{
+val2 = val2 / val1;
   long long x = (val1 + val2) / 2;
   long long y = val2 - x;
   return {(int)x, (int)y};
+  }
+  
 
   /*int missingnumber = -1;
 int repeatingnumber =-1;
